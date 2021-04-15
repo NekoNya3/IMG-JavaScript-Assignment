@@ -1,0 +1,8 @@
+document.write("  You are using: ")
+document.write(navigator.appName)
+document.write(" browser <br>  Screen resolution: ")
+document.write(window.screen.availHeight)
+document.write(" x ")
+document.write(window.screen.availWidth)
+document.write("<br>  Last Modified: ")
+document.write(document.lastModified)

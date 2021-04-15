@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Simple Slideshow</title>
+    <script>
+        var x = 0;
+        function clickityClickfwd() {
+            x += 1;
+            switch (x) {
+                case 0:
+                    document.pix.src = "NOOOOOO.jpg";
+                    break;
+                case 1:
+                    document.pix.src = "whatever.jpg";
+                    document.bwd.src="Danke.jfif";
+                    break;
+                default:
+                    document.pix.src = "yeahRight.jpg";
+                    document.bwd.src="Danke.jfif";
+                    document.fwd.src = null;
+                    // add display none
+                    x = 2;
+            }
+        }
+        function clickityClickbwd() {
+            x -= 1;
+            switch (x) {
+                case 0:
+                document.pix.src = "NOOOOOO.jpg";
+                document.fwd.src = "coneCat.jpg";
+                document.bwd.src = null;
+                break;
+                case 1:
+                    document.pix.src = "whatever.jpg";
+                    document.fwd.src = "coneCat.jpg";
+                    break;
+                case 2:
+                    document.pix.src = "yeahRight.jpg";
+                    break;
+                default:
+                    document.pix.src = "NOOOOOO.jpg";
+                    x = 0;
+            }
+        }
+    </script>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center;">
+    <img name="bwd"  style="width: 200px; height: 200px; border: none;" onclick="clickityClickbwd('NOOOOOO.jpg')">
+    </img>
+    <img name="pix" src="NOOOOOO.jpg" style="width: 200px; height: 200px; padding: 1em;">
+    </img>
+    <img name="fwd" src="coneCat.jpg" style="width: 200px; height: 200px; border: none;" onclick="clickityClickfwd('NOOOOOO.jpg')">
+    </img>
+
+</body>
+
+</html>

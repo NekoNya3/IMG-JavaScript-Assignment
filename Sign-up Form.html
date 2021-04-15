@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign-up Form JS Assignment</title>
+    <link rel='stylesheet' href="Sign-up Form.css">
+    <script src="Sign-up Form.js"></script>
+</head>
+
+<body>
+    <h1><i><u>Sign-Up Form</u></i></h1>
+    <h4>Avoid Pressing Enter: It submits the Form</h4>
+    <br>
+    <form name='SignUpForm' onsubmit="return formConfirmation();">
+        <ul>
+            <li><label for="Name">Name: </label></li>
+            <li><input type="text" name="Name" /></li>
+            <br>
+            <li><label for="Age">Age: </label></li>
+            <li> <input type="text" name="Age" />
+            </li>
+            <br>
+            <li><label for="Gender">Gender: </label></li>
+            <li><input type="radio" name="m" value="Male" /><span>Male</span>
+                <input type="radio" name="f" value="Female" /><span>Female</span>
+            </li>
+            <br>
+            <li><label for="City">City: </label></li>
+            <li><input type="text" name="City" />
+            </li>
+            <li><label>Educational Qualification: </label></li>
+            <li><select name="Educational Qualification">
+                    <option value="No formal Education">No formal education</option>
+                    <option value="Primary education">Primary education</option>
+                    <option value="Secondary education">Secondary education</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="Doctorate or Greater Degree">Doctorate or Greater Degree</option>
+                </select>
+            </li>
+            <br>
+            <li><label for="PhoneNumber">Phone Number: </label></li>
+            <li><input type="text" name="PhoneNumber" />
+            </li>
+            <br>
+            <br>
+            <li><label for="Email">Email: </label></li>
+            <li><input type="text" name="Email" />
+            </li>
+            <br>
+            <li><label for="Password">Password: </label></li>
+            <li><input type="text" name="Password" />
+            </li>
+            <br>
+            <li><label for="ConfirmPassword">Confirm Password: </label></li>
+            <li><input type="text" name="ConfirmPassword" />
+            </li>
+            <li><input type="submit" name="submit" value="Submit" />
+            </li>
+        </ul>
+    </form>
+
+</body>
+
+</html>

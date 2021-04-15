@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Manipulating Images</title>
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div>
+        <img id="master" src="compliments.jpg" 
+        style="height: 200px; width: 200px;"
+        onmouseover="unique()" 
+        onmouseout="original()">
+        </img>
+    </div>
+    <br>
+    <div style="display: flex;
+     justify-content: space-evenly;">
+        <img id="one" src="whatever.jpg" 
+        style="height: 200px; width: 200px;
+         padding: 1em;" 
+        onmouseover="unique1('coneCat.jpg')"
+            onmouseout="original1('whatever.jpg')"></img>
+        <img id="two" src="Plain Image.jfif" 
+        style="height: 200px; width: 200px;
+         padding: 1em;" 
+        onmouseover="unique2('Danke.jfif')"
+            onmouseout="original2('Plain Image.jfif')"></img>
+        <img id="three" src="yeahRight.jpg" 
+        style="height: 200px; width: 200px;
+         padding: 1em;" 
+        onmouseover="unique3('meme.jpg')"
+            onmouseout="original3('yeahRight.jpg')"></img>
+    </div>
+    <script src="ManipulatingImages.js">
+    </script>
+
+</body>
+
+</html>

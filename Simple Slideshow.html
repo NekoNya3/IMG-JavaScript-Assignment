@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Simple Slideshow</title>
+    <script>
+        var x = 0;
+        function clickityClick() {
+            switch (x) {
+                case 0:
+                    document.pix.src = "meme.jpg";
+                    x += 1;
+                    break;
+                case 1:
+                    document.pix.src = "whatever.jpg";
+                    x += 1;
+                    break;
+                case 2:
+                    document.pix.src = "yeahRight.jpg";
+                    x += 1;
+                    break;
+                default:
+                    document.pix.src = "NOOOOOO.jpg";
+                    x = 0;
+            }
+        }
+    </script>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center;">
+    <img name= "pix" src="NOOOOOO.jpg" style="width: 200px; height: 200px;" onclick="clickityClick('NOOOOOO.jpg')">
+    </img>
+
+</body>
+
+</html>
