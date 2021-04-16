@@ -47,7 +47,7 @@ function formSubmission() {
 }
 
 var passwordRegex = /^\w{8,30}$/gm;
-var emailRegex = /^[a-z0-9_A-Z.]+@.+\.(in|com)$/gm;
+var emailRegex = /^[\w\.?]+\@[\w\.?]+\.(in|com)$/gm;
 
 function validateData(fData) {
     const Email = fData.get('email');
