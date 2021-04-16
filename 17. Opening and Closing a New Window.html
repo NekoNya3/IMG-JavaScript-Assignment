@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Opening and Closing a New Window</title>
     </head>
-    <body>
-        
+    <body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <img src="wdys.jpeg" style="height: 400px; width: 300px; padding: 1rem 1rem 1rem 1rem;" onclick="openNW()" />
+        <button onclick="closeNW()">Close Window</button>
+        <script>
+            var newWindow;
+
+            function openNW(){
+                newWindow = window.open("https://www.google.com/");
+            }
+            function closeNW(){
+                newWindow.close();
+            }
+        </script>
     </body>
 </html>

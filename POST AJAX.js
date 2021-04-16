@@ -14,25 +14,47 @@ function formSubmission() {
     const formData = new FormData(FormElements);
     if (validateData(formData)) {
         var httpx = new XMLHttpRequest();
-        httpx.onreadystatechange = function(response){
-            console.log(response);
-        };
         httpx.open("POST", "https://reqres.in/api/login", true);
 
+        //taken from Mozilla MDN
+        httpx.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        httpx.onreadystatechange = function () {
+            // console.log(response);
+            if (httpx.readyState === XMLHttpRequest.DONE) {
+                var status = httpx.status;
+                if (status >= 200 && status < 400) {
+                    var elements = JSON.parse(httpx.responseText);
+                    console.log(elements.data);
+                    alert('Login Successful');
+                }
+                else{
+                    alert('Incorrect Login');
+                }
+            }
+            // console.log(httpx.responseText);
+
+        };
+
+        //taken from Mozilla MDN: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send example:POST part
+        console.log(`email=${encodeURIComponent(formData.get('email'))}&password=${encodeURIComponent(formData.get('password'))}`);
+        httpx.send(`email=${encodeURIComponent(formData.get('email'))}&password=${encodeURIComponent(formData.get('password'))}`);
     }
     else {
-        alert('Please provide correct details');
+        alert('Please provide correct details (password should b/w 8-30 characters');
     }
 
 }
 
-var passwordRegex = /\w{8,30}/gm;
-var emailRegex = /^\w+@.+\.(in|com)$/gm;
+var passwordRegex = /^\w{8,30}$/gm;
+var emailRegex = /^[a-z0-9_A-Z.]+@.+\.(in|com)$/gm;
 
 function validateData(fData) {
     const Email = fData.get('email');
+    // console.log(Email.match(emailRegex));
     const Password = fData.get('password');
-    return Password.match(passwordRegex) && Email.match(emailRegex);
+    // console.log(Password.match(passwordRegex));
+    return Password !== null && Email !== null && Password.match(passwordRegex) && Email.match(emailRegex);
 }
 
 // function passwordConfirmation(){
