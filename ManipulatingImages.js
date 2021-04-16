@@ -5,7 +5,7 @@ function unique(){
 }
 function original(){
     original1('whatever.jpg');
-    original2('Plain Image.jfif');
+    original2('Plain Image.jpeg');
     original3('yeahRight.jpg');
 }
 function unique1(imgName){

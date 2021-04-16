@@ -7,8 +7,5 @@ var word5 = prompt("type in a taste");
 var word6 = prompt("type in a halloween character");
 var colour = prompt("type in a colour (name or hex)");
 
-document.write("Finders Keepers<br>Losers weepers!<br><br>Welcome to the <div>"+username+"</div> era.<br>The <div>"+word1+"</div> has melted back to life!<br>Done my Time and served my sentence<br><div>"+word2+"</div> me up and watch me <div>"+word3+"</div>!<br>If it feels <div>"+word4+"<div>, tastes <div>"+word5+"</div><br>It must be mine!<br>Dynasty decapitated<br>You just might see a <div>"+word6+"</div> tonight!");
+document.write("Finders Keepers<br>Losers weepers!<br><br>Welcome to the"+username+" era.<br>The "+word1+" has melted back to life!<br>Done my Time and served my sentence<br>"+word2+" me up and watch me "+word3+"!<br>If it feels "+word4+", tastes "+word5+"<br>It must be mine!<br>Dynasty decapitated<br>You just might see a "+word6+" tonight!");
 
-// prettify install
-
-// editing is left dumbo
