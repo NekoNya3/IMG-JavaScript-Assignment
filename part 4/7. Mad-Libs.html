@@ -4,44 +4,38 @@
     <title>Mad-Libs</title>
 </head>
 
-<body onload="AMA()">
+<body>
 
+    <button onclick="AMA()">Start</button>
+    
     <script>
         function AMA() {
             var username = prompt("Kimi no namae wa?", "Your Name Here");
-            if (username != null) {
-                var word1 = prompt("type in a food item", "ice");
-                if (word1) {
-                    var word2 = prompt("type in a daily activity", "Dress");
-                    if (word2) {
-                        var word3 = prompt("type in an action", "die");
-                        if (word3) {
-                            var word4 = prompt("type in an emotion comparison (good weird bad etc)", "good");
-                            if (word4) {
-                                var word5 = prompt("type in a taste", "good");
-                                if (word5) {
-                                    var word6 = prompt("type in a halloween character", "ghost");
-                                    if (word6) {
-                                        var colour = prompt("type in a colour (name or hex)", "yellow");
-                                        if (colour) {
-                                            // word1.style.color = colour;
-                                            // word2.style.color = colour;
-                                            // word.style.color = colour;
-                                            // word4.style.color = colour;
-                                            // word5.style.color = colour;
 
-                                            document.write("Finders Keepers<br>Losers weepers!<br><br>Welcome to the <mark>" + username + "</mark> era.<br>The <mark>" + word1 + "</mark> has melted back to life!<br>Done my Time and served my sentence<br><mark>" + word2 + "</mark> me up and watch me <mark>" + word3 + "</mark>!<br>If it feels <mark>" + word4 + "</mark>, tastes <mark>" + word5 + "</mark><br>It must be mine!<br>Dynasty decapitated<br>You just might see a <mark>" + word6 + "</mark> tonight!");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else {
-               window.location.reload(true);
-            }
+            var word1 = prompt("type in a food item", "ice");
+
+            var word2 = prompt("type in a daily activity", "Dress");
+
+            var word3 = prompt("type in an action", "die");
+
+            var word4 = prompt("type in an emotion comparison (good weird bad etc)", "good");
+
+            var word5 = prompt("type in a taste", "good");
+
+            var word6 = prompt("type in a halloween character", "ghost");
+
+            var colour = prompt("type in a colour (name or hex)", "yellow");
+
+            // word1.style.color = colour;
+            // word2.style.color = colour;
+            // word.style.color = colour;
+            // word4.style.color = colour;
+            // word5.style.color = colour;
+
+            document.write('Finders Keepers<br>Losers weepers!<br><br>Welcome to the <div style="display: inline; background-color:' + colour + ';">' + username + '</div style="display: inline; background-color:' + colour + ';"> era.<br>The <div style="display: inline; background-color:' + colour + ';">' + word1 + '</div style="display: inline; background-color:' + colour + ';"> has melted back to life!<br>Done my Time and served my sentence<br><div style="display: inline; background-color:' + colour + ';">' + word2 + '</div style="display: inline; background-color: ' + colour + ';"> me up and watch me <div style="display: inline; background-color: ' + colour + ';">' + word3 + '</div style="display: inline; background-color: colour;">!<br>If it feels <div style="display: inline; background-color: ' + colour + ';">' + word4 + '</div style="display: inline; background-color: ' + colour + ';">, tastes <div style="display: inline; background-color: ' + colour + ';">' + word5 + '</div style="display: inline; background-color: ' + colour + ';"><br>It must be mine!<br>Dynasty decapitated<br>You just might see a </div style="display: inline; background-color: ' + colour + ';">' + word6 + '</div style="display: inline; background-color: ' + colour + ';"> tonight!');
+
+
+
         }
     </script>
 
