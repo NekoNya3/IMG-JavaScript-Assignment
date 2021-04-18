@@ -32,7 +32,7 @@ function formConfirmation() {
 }
 
 function confirmName(hName){
-    var dummyName = /^[A-Z|a-z|\s\.?]{2,}$/gm;
+    var dummyName = /^[A-Z|a-z|\s|\'\.?]{2,}$/gm;
     if (hName.value.match(dummyName)) {
         return true;
     }
